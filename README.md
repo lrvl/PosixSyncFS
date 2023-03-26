@@ -43,6 +43,14 @@ After daily use the sync only has to send the partial changes.
 - Might not be suitable for large filesystems: PosixSyncFS uses sparse files to create the filesystem, which may not be suitable for large filesystems or high-performance applications.
 - Limited to linear mappings: PosixSyncFS creates a linear mapping using dmsetup, which may not be suitable for complex storage configurations.
 
+## Requirements
+
+* Linux
+* Bash
+* Device mapper utility
+* (Optional Rclone - Rsync for cloud storage)
+* (Optional Any cloud storage bucket)
+
 ## License
 
 This project is licensed under the MIT License - see the LICENSE.md file for details.
