@@ -34,6 +34,7 @@ After daily use the sync only has to send the partial changes.
 
 - Easy to Use: PosixSyncFS is a set of simple Bash scripts that automate the process of creating sparse files, setting them up as loop devices, and creating a linear mapping using dmsetup. The resulting filesystem can be easily synced to a remote storage bucket using the included sync script.
 - Flexible: PosixSyncFS allows users to create a real POSIX filesystem using any filesystem type (e.g., XFS, ext4, etc.), making it a flexible solution for a variety of use cases.
+- Cost-effective: When used with the "-o discard" option, the filesystem can **recover used space** from the already sparse files. So your local and remote storage does not contain already removed information.
 - Flexible-remotes: Any cloud storage supported by rclone can be used. Notice that for example WebDAV lacks checksum features, it does work but not efficiently.
 - Cost-effective: PosixSyncFS uses sparse files to create the filesystem, which can save disk space and reduce storage costs.
 
